@@ -1,6 +1,6 @@
 # HARMONI — Human–Automation Interaction for Safer and More Explainable Driving
 
-> An experimental Human Factors project investigating how explainable automation feedback influences situation awareness, trust, workload, and intervention behaviour during Level-2 automated-driving scenarios.
+An experimental Human Factors project investigating how explainable automation feedback influences situation awareness, trust, workload, and intervention behaviour during Level-2 automated-driving scenarios.
 
 ---
 
@@ -145,18 +145,11 @@ The two conditions will be evaluated using controlled automated-driving scenario
 - SciPy
 - Matplotlib
 
-### Development
-
-- Git
-- GitHub
-
----
 
 ## Planned System
 
 The final prototype will contain:
 
-```text
 Participant
      │
      ▼
