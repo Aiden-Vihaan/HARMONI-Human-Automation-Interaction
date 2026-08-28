@@ -4,77 +4,70 @@
 
 HARMONI is an independent Human Factors and Human–Machine Interaction research project.
 
-The project investigates how humans interact with intelligent automated systems and how system communication can influence human understanding, decision-making, trust, workload, and intervention behaviour.
+The project investigates how humans understand, monitor, trust, and interact with automated systems when those systems communicate their capabilities, limitations, and required actions through an interface.
 
-# 1. Research Domain
-
-The primary research domain is:
-
-> Human–Automation Interaction
-
-The project sits at the intersection of:
-
-- Human Factors
-- Human–Computer Interaction
-- Human–Machine Interaction
-- UX Research
-- Automated Systems
-- Explainable AI
-- Experimental Psychology
-- Data Analysis
+HARMONI is not affiliated with or developed for any particular university, company, research laboratory, or institution.
 
 ---
 
-# 2. Application Domain
+# Research Motivation
 
-The initial application domain is:
+As intelligent automated systems become increasingly capable, humans are increasingly required to interact with, supervise, or collaborate with these systems.
 
-> Level-2 automated driving
+A technically capable automated system may still produce poor human outcomes if users do not understand:
 
-Automated driving provides a complex environment in which humans interact with partially automated technical systems.
+- What the system is doing
+- What the system has detected
+- What the system is capable of doing
+- What the system cannot safely handle
+- When human intervention is required
+- Why the system is requesting an action
 
-The domain is useful for studying:
+This creates an important Human Factors problem.
+
+The design of communication between humans and automation may influence understanding, trust, workload, decision-making, and intervention behaviour.
+
+---
+
+# Research Problem
+
+HARMONI investigates whether providing contextual and explainable feedback about an automated system's state and limitations can improve human interaction with that system.
+
+The project uses automated driving as an experimental domain because it provides a complex environment involving:
 
 - Automation
-- Human monitoring
-- System transparency
-- Situation awareness
-- Trust
-- Workload
-- Time-critical intervention
-- Human decision-making
+- Human supervision
+- Dynamic system states
+- Time-critical decisions
+- System limitations
+- Human intervention
+- Safety-related consequences
 
 ---
 
-# 3. Core Research Problem
+# Core Research Question
 
-The central problem investigated by HARMONI is:
+> How does explainable automation feedback influence human situation awareness and intervention behaviour during simulated Level-2 automated-driving scenarios?
 
-> How can intelligent automated systems communicate their current state, capabilities, limitations, and required actions so that humans can understand and interact with the system appropriately?
+This research question will be refined after reviewing relevant academic literature.
 
 ---
 
-# 4. Research Perspective
+# Research Perspective
 
-HARMONI approaches this problem from a Human Factors perspective.
+HARMONI approaches the problem from a Human Factors perspective rather than an autonomous-driving engineering perspective.
 
-The project does not assume that technological capability alone determines system effectiveness.
+The project is primarily concerned with:
 
-Instead, it considers the interaction between:
-
-
-Technical System
-       ↓
-System State
-       ↓
-Information Communication
-       ↓
-Human Perception
-       ↓
-Situation Awareness
-       ↓
-Decision
-       ↓
-Human Action
-       ↓
-System Outcome
+```text
+Human
+  ↓
+Perception and interpretation
+  ↓
+Understanding of automation
+  ↓
+Decision-making
+  ↓
+Interaction / intervention
+  ↓
+Outcome
