@@ -6,10 +6,6 @@ HARMONI is an independent Human Factors and Human–Machine Interaction research
 
 The project investigates how humans interact with intelligent automated systems and how system communication can influence human understanding, decision-making, trust, workload, and intervention behaviour.
 
-HARMONI is intentionally university-neutral and is not designed for or affiliated with any particular university, laboratory, company, or research group.
-
----
-
 # 1. Research Domain
 
 The primary research domain is:
@@ -66,7 +62,7 @@ The project does not assume that technological capability alone determines syste
 
 Instead, it considers the interaction between:
 
-```text
+
 Technical System
        ↓
 System State
