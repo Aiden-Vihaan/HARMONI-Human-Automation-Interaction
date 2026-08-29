@@ -1,0 +1,42 @@
+{
+  "participantId": "P001",
+  "sessionId": "S001",
+  "trialId": "T001",
+  "scenarioId": "SCN01",
+  "condition": "STATE_AND_CONTEXT",
+  "events": [
+    {
+      "eventId": "EVT001",
+      "eventName": "TRIAL_STARTED",
+      "timestamp": "2026-08-29T10:00:00.000Z"
+    },
+    {
+      "eventId": "EVT002",
+      "eventName": "AUTOMATION_STARTED",
+      "timestamp": "2026-08-29T10:00:00.100Z"
+    },
+    {
+      "eventId": "EVT003",
+      "eventName": "OBSTACLE_APPEARED",
+      "timestamp": "2026-08-29T10:00:10.000Z"
+    },
+    {
+      "eventId": "EVT004",
+      "eventName": "AUTOMATION_LIMITED",
+      "timestamp": "2026-08-29T10:00:13.000Z"
+    },
+    {
+      "eventId": "EVT005",
+      "eventName": "COMMUNICATION_DISPLAYED",
+      "timestamp": "2026-08-29T10:00:13.020Z"
+    },
+    {
+      "eventId": "EVT006",
+      "eventName": "PARTICIPANT_ACTION",
+      "timestamp": "2026-08-29T10:00:15.400Z",
+      "metadata": {
+        "action": "TAKE_CONTROL"
+      }
+    }
+  ]
+}
