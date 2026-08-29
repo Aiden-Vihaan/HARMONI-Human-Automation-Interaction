@@ -1,29 +1,30 @@
+# HARMONI — Day 20
 ## Experimental Data Flow
 
 ---
 
-# 1. Overview
+# 1. Runtime Flow
 
-The data flow follows:
+The runtime architecture is:
 
-Scenario Configuration
-        ↓
-Trial Initialisation
-        ↓
-Condition Assignment
-        ↓
-Scenario Execution
-        ↓
-System Events
-        ↓
-Participant Events
-        ↓
-Assessment Responses
-        ↓
-Raw Event Dataset
-        ↓
-Trial-Level Dataset
-        ↓
-Derived Metrics
-        ↓
-Statistical Analysis
+Participant
+    |
+    v
+Interface
+    |
+    v
+Trial Controller
+    |
+    +------------------+
+    |                  |
+    v                  v
+State Machine       Event Logger
+    |                  |
+    |                  |
+    +--------+---------+
+             |
+             v
+        Event Stream
+             |
+             v
+       Trial Dataset
