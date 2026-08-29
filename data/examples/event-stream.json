@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "participantId": "P001",
+  "sessionId": "S001",
+  "trialId": "T001",
+  "scenarioId": "SCN01",
+  "condition": "STATE_AND_CONTEXT",
+  "events": [
+    {
+      "eventId": "EVT_001",
+      "sequenceNumber": 1,
+      "eventName": "TRIAL_STARTED",
+      "timestamp": "2026-08-29T10:00:00.000Z",
+      "monotonicTimestamp": 1000
+    },
+    {
+      "eventId": "EVT_002",
+      "sequenceNumber": 2,
+      "eventName": "AUTOMATION_STARTED",
+      "timestamp": "2026-08-29T10:00:00.100Z",
+      "monotonicTimestamp": 1100
+    },
+    {
+      "eventId": "EVT_003",
+      "sequenceNumber": 3,
+      "eventName": "OBSTACLE_APPEARED",
+      "timestamp": "2026-08-29T10:00:08.000Z",
+      "monotonicTimestamp": 9000
+    },
+    {
+      "eventId": "EVT_004",
+      "sequenceNumber": 4,
+      "eventName": "AUTOMATION_LIMITED",
+      "timestamp": "2026-08-29T10:00:11.000Z",
+      "monotonicTimestamp": 12000
+    },
+    {
+      "eventId": "EVT_005",
+      "sequenceNumber": 5,
+      "eventName": "COMMUNICATION_DISPLAYED",
+      "timestamp": "2026-08-29T10:00:11.020Z",
+      "monotonicTimestamp": 12020,
+      "metadata": {
+        "condition": "STATE_AND_CONTEXT",
+        "messageVersion": "1.0.0"
+      }
+    },
+    {
+      "eventId": "EVT_006",
+      "sequenceNumber": 6,
+      "eventName": "PARTICIPANT_ACTION",
+      "timestamp": "2026-08-29T10:00:13.370Z",
+      "monotonicTimestamp": 14370,
+      "metadata": {
+        "action": "TAKE_CONTROL"
+      }
+    }
+  ]
+}
