@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "participantId": "P001",
+  "sessionId": "S001",
+  "trialId": "T001",
+  "scenarioId": "SCN01",
+  "condition": "STATE_CONTEXT_AND_REASON",
+  "events": [
+    {
+      "sequenceNumber": 1,
+      "eventName": "TRIAL_STARTED",
+      "metadata": {
+        "fromState": "INITIALISING",
+        "toState": "AUTONOMOUS",
+        "transitionEvent": "START"
+      }
+    },
+    {
+      "sequenceNumber": 2,
+      "eventName": "ENVIRONMENT_CHANGED",
+      "metadata": {
+        "fromState": "AUTONOMOUS",
+        "toState": "ENVIRONMENT_DEVELOPING",
+        "transitionEvent": "ENVIRONMENT_TRIGGER"
+      }
+    },
+    {
+      "sequenceNumber": 3,
+      "eventName": "CRITICAL_EVENT_TRIGGERED",
+      "metadata": {
+        "fromState": "ENVIRONMENT_DEVELOPING",
+        "toState": "CRITICAL_EVENT",
+        "transitionEvent": "CRITICAL_EVENT"
+      }
+    },
+    {
+      "sequenceNumber": 4,
+      "eventName": "COMMUNICATION_DISPLAYED",
+      "metadata": {
+        "fromState": "CRITICAL_EVENT",
+        "toState": "COMMUNICATION",
+        "transitionEvent": "COMMUNICATION_DISPLAYED"
+      }
+    },
+    {
+      "sequenceNumber": 5,
+      "eventName": "PARTICIPANT_ACTION",
+      "metadata": {
+        "fromState": "COMMUNICATION",
+        "toState": "WAITING_FOR_ACTION",
+        "transitionEvent": "COMMUNICATION_DISPLAYED"
+      }
+    }
+  ]
+}
