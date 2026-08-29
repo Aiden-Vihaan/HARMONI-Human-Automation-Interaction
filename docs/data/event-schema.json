@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "entity": "ExperimentEvent",
+  "required": [
+    "eventId",
+    "sequenceNumber",
+    "participantId",
+    "sessionId",
+    "trialId",
+    "scenarioId",
+    "condition",
+    "eventName",
+    "timestamp",
+    "monotonicTimestamp"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string"
+    },
+    "sequenceNumber": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "participantId": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "trialId": {
+      "type": "string"
+    },
+    "scenarioId": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "STATE_ONLY",
+        "STATE_AND_CONTEXT",
+        "STATE_CONTEXT_AND_REASON"
+      ]
+    },
+    "eventName": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "monotonicTimestamp": {
+      "type": "number",
+      "minimum": 0
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}
