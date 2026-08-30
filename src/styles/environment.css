@@ -1,0 +1,258 @@
+.participant-environment {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background: #f4f6f8;
+  color: #17202a;
+}
+
+.participant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.participant-header__eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  opacity: 0.65;
+}
+
+.participant-header h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.automation-status {
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #d7dce1;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.automation-status__indicator {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #5c6770;
+}
+
+.automation-status__label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.automation-status strong {
+  font-size: 14px;
+}
+
+.environment-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid #cbd2d8;
+  border-radius: 14px;
+  background: #dce2e6;
+  isolation: isolate;
+}
+
+.environment-canvas__sky {
+  position: absolute;
+  inset: 0 0 48% 0;
+  background: #dbe7ed;
+}
+
+.environment-canvas__road {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  background: #343a40;
+  clip-path: polygon(
+    36% 0,
+    64% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.environment-canvas__objects {
+  position: absolute;
+  inset: 0;
+}
+
+.environment-object {
+  position: absolute;
+  z-index: 5;
+}
+
+.road-boundary {
+  background: #e9edf0;
+  opacity: 0.85;
+}
+
+.lane-marker {
+  z-index: 3;
+  border-radius: 999px;
+  background: #f2f2f2;
+  opacity: 0.9;
+}
+
+.vehicle {
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vehicle-body {
+  width: 65%;
+  height: 90%;
+  border-radius: 10px 10px 6px 6px;
+  background: #59636d;
+  border: 2px solid #d8dde1;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.obstacle {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  background: #8b9298;
+}
+
+.obstacle-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.reference-object {
+  border-radius: 50%;
+  background: #7d8790;
+}
+
+.environment-canvas__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 80px rgba(0, 0, 0, 0.12);
+}
+
+.action-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid #d7dce1;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.action-panel__eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+}
+
+.action-panel h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.action-panel p {
+  max-width: 650px;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.take-control-button {
+  min-width: 180px;
+  min-height: 52px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #17202a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.take-control-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.take-control-button:focus-visible {
+  outline: 3px solid #6b7c8c;
+  outline-offset: 3px;
+}
+
+.take-control-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .participant-header,
+  .action-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .automation-status {
+    width: auto;
+  }
+
+  .environment-canvas {
+    min-height: 420px;
+  }
+
+  .take-control-button {
+    width: 100%;
+  }
+}
