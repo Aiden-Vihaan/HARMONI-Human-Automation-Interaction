@@ -61,10 +61,8 @@ export function createRunningTrial(
       },
 
       onComplete() {
-        state = {
-          ...state,
-          phase: 'COMPLETED',
-        }
+        // Reserved for future
+        // automatic completion.
       },
     })
 
