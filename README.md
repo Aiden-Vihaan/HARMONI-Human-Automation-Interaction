@@ -1,178 +1,313 @@
-# HARMONI — Human–Automation Interaction for Safer and More Explainable Driving
+HARMONI
 
-An experimental Human Factors project investigating how explainable automation feedback influences situation awareness, trust, workload, and intervention behaviour during Level-2 automated-driving scenarios.
+A Transparent Analytical Interface for Participant-Level Human Factors Experimentation
 
----
+HARMONI is an independent research-oriented analytical interface designed to explore how human factors and experimental interaction data can be transformed into transparent, participant-level evidence.
 
-## Overview
+The central design question is:
 
-HARMONI is a research-oriented Human–Machine Interaction project focused on the relationship between automated systems and their human operators.
-
-The project investigates whether contextual and explainable feedback about an automated-driving system's current state, capabilities, limitations, and required actions can improve human understanding and intervention behaviour.
-
-Rather than developing an autonomous-driving algorithm, HARMONI focuses on the Human Factors surrounding interaction with automation.
+«How can an analytical interface communicate experimental differences without hiding participant-level variation or overstating what the data can establish?»
 
 ---
 
-## Research Problem
+Why HARMONI?
 
-As automated-driving systems become increasingly capable, drivers may not always maintain an accurate understanding of what the automation is doing or what it is capable of handling.
+Experimental datasets often contain several analytical layers:
 
-Interfaces that communicate only a warning or system state may provide insufficient context during situations where human intervention is required.
+Raw Events
+    ↓
+Trials
+    ↓
+Participants
+    ↓
+Conditions
+    ↓
+Differences
+    ↓
+Effect Magnitude
+    ↓
+Robustness
+    ↓
+Interpretation
 
-HARMONI investigates whether contextual and explainable automation feedback can support more appropriate human interaction with automated systems.
+As data moves upward through these layers, useful information can become hidden.
 
----
-
-## Primary Research Question
-
-**How does explainable automation feedback influence driver situation awareness and intervention behaviour during Level-2 automated-driving scenarios?**
-
----
-
-## Secondary Research Questions
-
-1. Does explainable automation feedback improve users' understanding of the current state and limitations of automated driving?
-
-2. How does explainable automation feedback influence driver trust and confidence in the automated system?
-
-3. How does explainable automation feedback influence perceived mental workload during automation-critical situations?
-
-4. Does explainable automation feedback affect the speed and accuracy of driver intervention?
+HARMONI therefore keeps participant-level evidence connected to aggregate analytical results.
 
 ---
 
-## Initial Hypotheses
+Core Features
 
-### H1 — Situation Awareness
+Participant-Level Analysis
 
-Participants exposed to explainable automation feedback will demonstrate higher situation-awareness scores than participants exposed to conventional feedback.
+Condition comparisons preserve within-participant pairing.
 
-### H2 — Intervention Behaviour
+For each participant:
 
-Participants exposed to explainable automation feedback will demonstrate faster and/or more accurate responses during automation-critical scenarios.
+Difference = Condition B − Condition A
 
-### H3 — Trust
-
-Explainable automation feedback will influence users' trust in automation by providing greater transparency regarding system capabilities and limitations.
-
-### H4 — Workload
-
-Explainable automation feedback will affect perceived workload during critical automation scenarios.
-
-> The direction and magnitude of these effects will be determined empirically rather than assumed in advance.
+This produces a participant-level difference distribution.
 
 ---
 
-## Experimental Concept
+Descriptive Statistics
 
-HARMONI will compare two interface conditions.
+The interface provides:
 
-### Condition A — Conventional Feedback
-
-A minimal automation interface communicating system status and intervention warnings.
-
-Example:
-
-> ⚠ TAKE CONTROL
-
-### Condition B — Explainable Feedback
-
-A contextual interface communicating system state, detected conditions, automation limitations, and recommended human action.
-
-Example:
-
-> **AUTOMATION LIMITATION**
->
-> Pedestrian detected ahead.
->
-> Automated braking unavailable.
->
-> **Driver intervention required.**
-
-The two conditions will be evaluated using controlled automated-driving scenarios.
+- mean difference
+- median difference
+- standard deviation
+- minimum
+- maximum
+- valid participant count
+- missing participant count
 
 ---
 
-## Planned Human Factors Measures
+Standardized Effect
 
-### Behavioural Measures
+HARMONI calculates a paired standardized effect based on the mean participant difference and the standard deviation of participant differences.
 
-- Reaction time
-- Decision accuracy
-- Intervention success
-- Error rate
+Standardized Effect
+=
+Mean Participant Difference
+/
+SD of Participant Differences
 
-### Subjective Measures
+The standardized effect is presented as a descriptive magnitude measure.
 
-- Situation awareness
-- Trust in automation
-- Perceived workload
-- Confidence
-- Perceived safety
+It is not treated as statistical significance.
 
 ---
 
-## Research Areas
+Robustness Diagnostics
 
-- Human–Automation Interaction
-- Human–Machine Interaction
-- Human Factors
-- Situation Awareness
-- Trust in Automation
-- Mental Workload
-- Explainable Automation
-- Automated Driving
-- Human-Centred AI
-- Experimental UX Research
+The system provides descriptive quality-control information including:
+
+- completeness
+- missingness
+- directional consistency
+- mean-median comparison
+- potential extreme observations
+- sensitivity summaries
+
+Potential extreme observations are flagged for diagnostic review rather than automatically removed.
 
 ---
 
-## Technology
+Controlled Interpretation
 
-### Interface & Prototype
+Interpretation is generated using deterministic analytical templates.
 
-- React
+This approach prioritizes:
+
+- reproducibility
+- auditability
+- consistency
+- scientific restraint
+
+The system avoids automatically converting descriptive differences into causal or significance claims.
+
+---
+
+Research Integrity
+
+HARMONI explicitly separates:
+
+Observed Difference
+        ↓
+Effect Magnitude
+        ↓
+Robustness Diagnostics
+        ↓
+Interpretation
+
+from:
+
+Statistical Inference
+        ↓
+Causal Explanation
+
+The current system is primarily descriptive.
+
+Effect magnitude alone does not establish statistical significance, causality, or practical importance.
+
+---
+
+Analytical Architecture
+
+Data Ingestion
+      ↓
+Validation
+      ↓
+Trial Analysis
+      ↓
+Participant Summary
+      ↓
+Condition Comparison
+      ↓
+Participant Difference
+      ↓
+Effect Analysis
+      ↓
+Robustness Analysis
+      ↓
+Interpretation
+      ↓
+Research Dashboard
+
+---
+
+Technology
+
+HARMONI is implemented using the technologies documented in the repository.
+
+The implementation emphasizes:
+
 - TypeScript
-- HTML/CSS
-- Figma
+- modular analytical functions
+- typed analytical objects
+- deterministic calculations
+- component-based interface design
+- automated testing
 
-### Data & Analysis
+Only technologies actually used by the implementation are listed here.
 
-- Python
-- Pandas
-- NumPy
-- SciPy
-- Matplotlib
+---
 
+Project Structure
 
-## Planned System
+HARMONI/
+│
+├── src/
+│   ├── analysis/
+│   ├── components/
+│   ├── data/
+│   └── types/
+│
+├── docs/
+│   ├── architecture/
+│   ├── research/
+│   ├── testing/
+│   ├── progress/
+│   └── case-study/
+│
+├── public/
+│
+├── README.md
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── .gitignore
+└── LICENSE
 
-The final prototype will contain:
+---
 
-Participant
-     │
-     ▼
-Driving Simulation
-     │
-     ├── Automation State
-     │
-     ├── Scenario Engine
-     │
-     ├── Interface A
-     │
-     └── Interface B
-             │
-             ▼
-        Event Logger
-             │
-             ▼
-      Experiment Dataset
-             │
-             ▼
-       Statistical Analysis
-             │
-             ▼
-       Human Factors Findings
+Research-Oriented Design Principles
 
-## Author: AIDEN VIHAAN
+1. Participant-Level Transparency
+
+Aggregate results should remain connected to individual participant observations.
+
+2. Explicit Missingness
+
+Missing data is represented explicitly rather than converted into zero.
+
+3. Effect ≠ Significance
+
+Standardized effect magnitude is not presented as statistical significance.
+
+4. Diagnostic ≠ Deletion
+
+Potential extreme observations are flagged rather than automatically removed.
+
+5. Deterministic Interpretation
+
+Analytical interpretation is generated from explicit rules rather than unrestricted text generation.
+
+6. Reproducibility
+
+Identical data and configuration should produce identical analytical outputs.
+
+---
+
+Limitations
+
+HARMONI is an independent research-oriented software project and is not intended to replace specialized statistical software.
+
+The current analytical system is primarily descriptive.
+
+Depending on the research question, additional methods may be required, including:
+
+- confidence intervals
+- inferential hypothesis tests
+- repeated-measures statistical models
+- hierarchical models
+- Bayesian methods
+- longitudinal analysis
+
+The interpretation of a metric also depends on its domain-specific semantics.
+
+---
+
+Future Work
+
+Potential future extensions include:
+
+- formal inferential analysis
+- confidence intervals
+- Bayesian analysis
+- hierarchical modeling
+- longitudinal participant analysis
+- automated research reports
+- experiment configuration management
+- usability evaluation
+- accessibility evaluation
+- larger-scale datasets
+
+---
+
+Portfolio Case Study
+
+The complete case study documents:
+
+1. Context
+2. Problem
+3. Research Question
+4. Design Goals
+5. Data Model
+6. Analytical Pipeline
+7. Participant-Level Analysis
+8. Effect Analysis
+9. Robustness
+10. Interface Design
+11. Validation
+12. Limitations
+13. Future Work
+14. Reflection
+
+---
+
+Project Status
+
+Version:
+
+"1.0.0"
+
+Development cycle:
+
+"42 days"
+
+Status:
+
+"Portfolio-ready pending final validation"
+
+---
+
+Final Statement
+
+HARMONI explores a simple but important principle:
+
+«The path from observation to interpretation should remain visible.»
+
+Rather than presenting an aggregate result as an isolated number, the system connects the result back to participant-level evidence, variability, effect magnitude, robustness diagnostics, and methodological limitations.
